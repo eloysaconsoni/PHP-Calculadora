@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora Sistemas</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="Imagens\icon.png"/>
+
+</head>
+<form name="calculadora_sistemas">
+<body id="fundo">
+
+		<link rel="stylesheet" type="text/css" href="css/externo.css">
+		<script type="text/javascript" src="js/calculadora.js"></script> 		
+
+	<table id="tamanho">
+		<tr>
+			
+			<input id="visor" style="position: absolute; top: 230px; left: 610px; width: 308px; height: 70px; background-color: black; border-color: black;color: white; font-size: 40px;" type="text" name="visor">
+			<td id="c" style="padding-top: 300px;"><input id="cd" type="reset" name="limpar" value="C" onclick="reset()"></td> 
+			<td><input id="por" style="position: relative; top: 150px;" type="button" name="porcentagem" value="%"onclick="preencher('%');"></td>
+			<td><input id="div" style="position: relative; top: 150px;" type="button" name="dividir" value="÷"onclick="preencher('/');"></td>
+			<td><input id="x" style="position: relative; top: 150px;" type="button" name="multiplicar" value="X" onclick="preencher('*');"></td>
+		</tr>
+		<tr>
+			
+			<td id="sete"><input id="hov" type="button" name="numero" value="7" onclick="preencher(7);"></td>
+			<td><input id="hov" type="button" name="numero" value="8" onclick="preencher(8);"></td>
+			<td><input id="hov" type="button" name="numero" value="9" onclick="preencher(9);"></td>
+			<td><input id="menos" type="button" name="numero" value="-"onclick="preencher('-');"></td>
+		</tr>
+		<tr>
+			
+			<td id="quatro"><input id="hov" type="button" name="numero" value="4" onclick="preencher(4)"></td>			
+			<td><input id="hov" type="button" name="numero" value="5" onclick="preencher(5);"></td>			
+			<td><input id="hov" type="button" name="numero" value="6" onclick="preencher(6);"></td>	
+			<td><input id="mais" type="button" name="numero" value="+" onclick="preencher('+');"></td>
+
+		</tr>
+		<tr>
+			
+			<td id="um"><input id="hov" type="button" name="numero" value="1" onclick="preencher(1);"></td>
+			<td><input id="hov" type="button" name="numero" value="2" onclick="preencher(2);"></td>
+			<td><input id="hov" type="button" name="numero" value="3" onclick="preencher(3);"></td>
+		</tr>
+		<tr>
+			
+			<td id="zero"><input id="hov" style="width: 155px;" type="button" name="numero" value="0" onclick="preencher(0);"></td>
+			<td id="virgula"><input id="hov" type="button" name="virgula" value="." onclick="preencher('.');"></td>
+			<td id="igual"><input id="igualinput" style="height: 164px;" type="button" name="igual" value="=" onclick="calcular();"></td>
+		</tr>
+
+	</table>
+
+</form>
+</body>
+</html>
