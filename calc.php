@@ -1,14 +1,20 @@
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<body style="background: #607B8B">
+
 <?php 
-//error_reporting(0);
+error_reporting(0);
 
  $_POST["val1"]; 
  $_POST["opera"];
  $_POST["val2"];
-teste();
 
-function teste(){
-if (is_null($_POST["val1"])) {
-	echo "Um dos valores não foi digitado, por favor verifique";
+	evazio();
+
+function evazio(){
+
+			if(empty($_POST['val1']) || empty($_POST['opera'])){ 
+			//validação de campos vazios
+		echo "Existem campos não preenchidos por favor verifique";
 }else{
 	caso();
 }
@@ -32,8 +38,8 @@ switch ($_POST["opera"]) {
 			  echo "O resultado da multiplicação é: $total";
 		
 		break;
-	case '/':  if($_POST["val2"] == 0) {
-					echo "Não é possivel dividir por zero"; //validação de dividir por zero
+	case '/':  if($_POST["val2"] == 0 || empty($_POST['val2'])) {
+					echo "Não é possivel dividir por zero ou nada"; //validação de dividir por zero
 				}else{
 			  $total = $_POST["val1"] / $_POST["val2"];
 			  echo "O resultado da divisão é: $total";  }
@@ -41,8 +47,11 @@ switch ($_POST["opera"]) {
 		break;
 	case '%': $total = $_POST["val1"] * $_POST["val2"];
 			  $total = $total / 100;
-			  echo "O resultado da porcentagem é: $total";
+			  echo "O resultado da porcentagem é: $total%";
 			break;
+	case 'is_numeric($_POST["opera"])':
+			echo "Não é possivel usar uma operação númerica";
+		break;
 	default:
 		
 		break;
@@ -50,3 +59,11 @@ switch ($_POST["opera"]) {
 
 }
  ?>
+
+<p class="icone">
+	<img style="left: 1200px;" src="css/imagens/minus.png"> 
+	<img style="left: 200px; top:500px;" src="css/imagens/multiply.png"> 
+	<img style="left: 560px; top: 300px" src="css/imagens/percentage.png">
+	<img style="left: 1000px;top: 500px;" src="css/imagens/division.png">
+	<img src="css/imagens/plus.png"> </body>
+</p>

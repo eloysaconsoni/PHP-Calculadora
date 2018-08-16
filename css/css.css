@@ -1,3 +1,9 @@
+.back {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+}
+
 .fundo{
 	position: absolute;
 	width: 400px;
@@ -5,12 +11,14 @@
 	left: 400px;
 	top: 100px;
 	border: solid;
-	background: #DDA0DD;
-}
-.fundo input{
-	width:65px;
+	
 }
 .fonte {
 	position: absolute;
 	left: 350px;
+}
+.icone img{
+	position: absolute;
+	width: 100px;
+	height: 100px;
 }
