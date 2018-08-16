@@ -1,0 +1,16 @@
+.fundo{
+	position: absolute;
+	width: 400px;
+	height: 150px;
+	left: 400px;
+	top: 100px;
+	border: solid;
+	background: #DDA0DD;
+}
+.fundo input{
+	width:65px;
+}
+.fonte {
+	position: absolute;
+	left: 350px;
+}
